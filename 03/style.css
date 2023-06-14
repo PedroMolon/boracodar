@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+:root {
+ --font-inter: 'Inter', sans-serif;
+ --bg-color-body: #0b0911;
+ --bg-color-app: #130f1e;
+ --text-color: #ffffff;
+ --bg-button-1: #8257E5;
+ --bg-button-2: #3c3748;
+}
+
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: var(--font-inter);
+}
+
+body {
+ height: 100vh;
+ width: 100vw;
+ background: var(--bg-color-body);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.app {
+ width: 400px;
+ height: 700px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 50px 15px;
+ background: var(--bg-color-app);
+ border: none;
+ border-radius: 15px;
+ gap: 20px;
+}
+
+h1 {
+ font-style: normal;
+ font-weight: 700;
+ font-size: 32px;
+ line-height: 100%;
+ color: var(--text-color);
+}
+
+p {
+ font-style: normal;
+ font-weight: 400;
+ font-size: 20px;
+ line-height: 23px;
+ color: var(--text-color);
+ opacity: 0.6;
+}
+
+.buttons {
+ display: flex;
+ flex-direction: column;
+ margin-top: 10px;
+ gap: 30px;
+}
+
+#style1 {
+ --bg-default: #8257e5;
+ --bg-hover: #9674e5;
+}
+
+#style2 {
+ --bg-default: #3c3748;
+ --bg-hover: #6a617f;
+}
+
+#style3 {
+ --bg-default: transparent;
+ --bg-hover: transparent;
+}
+
+button {
+ background-color: var(--bg-default);
+ font-family: var(--font-inter);
+ border: 0;
+ color: var(--text-color);
+ padding: 12px 24px;
+ text-transform: uppercase;
+ font-weight: 500;
+ font-size: 14px;
+ line-height: 24px;
+ border-radius: 24px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 8px;
+}
+
+button:hover {
+ background-color: var(--bg-hover);
+}
+
+button:focus {
+ outline: 2px solid #d9cdf7;
+}
+
+button:disabled {
+ background-color: var(--bg-default);
+ opacity: 0.56;
+ cursor: not-allowed;
+}
+
+.loading {
+ cursor: progress;
+}
+
+.loading i {
+ font-size: 16px;
+ animation: spin 700ms infinite linear;
+}
+
+.movable {
+ cursor: move;
+}
+
+.movable i {
+ font-size: 18px;
+}
+
+@keyframes spin {
+ for {
+  transform: rotate(0deg);
+ } 
+ to {
+  transform: rotate(360deg);
+ }
+}

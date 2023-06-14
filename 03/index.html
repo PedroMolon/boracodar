@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
+ <script src="https://unpkg.com/phosphor-icons"></script>
+ <title>Buttons</title>
+</head>
+<body>
+ <main class="app">
+  <h1>Teste os botões</h1>
+  <p>Interaja com os botões e observe a mudança de aparência e de cursores</p>
+  <div class="buttons">
+   <button id="style1" onclick="loading(event)">INTERAJA COMIGO</button>
+   <button id="style2">INTERAJA COMIGO</button>
+   <button id="style3"><i class="ph-list"></i>INTERAJA COMIGO</button>
+  </div>
+ </main>
+ <script>
+  function loading(event) {
+    const button = event.currentTarget
+    button.classList.add('loading')
+    const text = button.textContent
+    button.innerHTML = `
+    <i class="ph-circle-notch"></i>
+    ${text}
+    `
+  }
+ </script>
+</body>
+</html>
