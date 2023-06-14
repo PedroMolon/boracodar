@@ -1,114 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500&family=Lato:wght@300;400&display=swap');
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
 
 :root {
  --bg-color: #d9cdf7;
  --text-color: #271a45;
- --font-crimson: 'Crimson Pro', serif;
- --font-lato: 'Lato', sans-serif;
-}
-
-* {
- padding: 0;
- margin: 0;
- box-sizing: border-box;
 }
 
 body {
- width: 100vw;
+ background-color: var(--bg-color);
  height: 100vh;
- background: var(--bg-color);
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 20px;
+
+ display: grid;
+ place-content: center;
 }
 
-.app {
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 0;
- gap: 15px;
+body * {
+ color: var(--text-color);
+ font-family: "Lato", sans-serif;
+ line-height: 100%;
 }
 
-.product-image {
- display: flex;
- flex-direction: column;
- align-items: flex-end;
-}
-
-#btn-360 {
- border: none;
- background: transparent;
- width: 50px;
- height: 50px;
-}
-
-#btn-close {
- border: none;
- background: transparent;
- width: 50px;
- height: 50px;
+#btn-close,
+#animated {
  display: none;
 }
 
-#btn-360 img {
- width: 50px;
- height: 50px;
-}
-
-.product-image img {
- 
-}
-
-.product-infos {
+#app {
  display: flex;
- flex-direction: column;
- align-items: flex-start;
- justify-content: center;
- padding: 0;
- gap: 20px;
- color: var(--text-color)
+ align-items: center;
+ gap: 63px;
 }
 
-#code {
- font-family: var(--font-lato);
- font-style: normal;
+#product-image {
+ position: relative;
+}
+
+#product-image button {
+ position: absolute;
+ right: 0;
+
+ background-color: transparent;
+ border: 0;
+
+ cursor: pointer;
+}
+
+html.animated button#btn-360,
+html.animated img#static {
+ display: none;
+}
+
+html.animated button#btn-close,
+html.animated img#animated {
+ display: initial;
+}
+
+#product-image > img {
+ width: 449px;
+ height: 222px;
+ object-fit: cover;
+}
+
+h4 {
  font-weight: 300;
- font-size: 15px;
- line-height: 100%;
+ font-size: 10px;
 }
 
-#name {
- font-family: var(--font-crimson);
- font-style: normal;
+h1 {
+ font-family: "Crimson Pro", serif;
  font-weight: 600;
- font-size: 48px;
- line-height: 100%;
+ font-size: 32px;
+
+ margin-top: 12px;
 }
 
-#value {
- font-family: var(--font-lato);
- font-style: normal;
- font-weight: 400;
- font-size: 24px;
- line-height: 100%;
+p {
+ margin-top: 12px;
  opacity: 0.67;
 }
 
-.product-infos button {
- display: flex;
- align-items: center;
- justify-content: center;
+#product-details button {
+ font-size: 12px;
+ line-height: 16px;
+
  padding: 8px 16px;
- gap: 8px;
  border: 0.5px solid var(--text-color);
  border-radius: 999px;
- background: transparent;
- font-family: var(--font-lato);
- font-style: normal;
- font-weight: 400;
- font-size: 18px;
- line-height: 16px;
- color: var(--text-color);
+
+ background-color: transparent;
+
+ margin-top: 20px;
+ cursor: pointer;
 }
