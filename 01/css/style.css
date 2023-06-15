@@ -71,6 +71,11 @@
  width: 40px;
  height: 40px;
  color: var(--color-light);
+ cursor: pointer;
+}
+
+.player ion-icon:hover {
+ color: #0f0d13;
 }
 
 .timer {
