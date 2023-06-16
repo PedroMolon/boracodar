@@ -115,3 +115,136 @@ img {
  width: 20px;
  height: 20px;
 }
+
+.container1 p {
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ text-align: center;
+ color: var(--text-color);
+}
+
+.other-user {
+ width: 311px;
+ height: 80px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ justify-content: center;
+ padding: 0;
+ gap: 10px;
+}
+
+.other-user h2 {
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ text-align: left;
+ color: var(--text-color);
+}
+
+.other-message {
+ width: 149px;
+ display: flex;
+ align-items: flex-start;
+ padding: 14px;
+ gap: 10px;
+ background: var(--bg-other-user);
+ border-radius: 0px 8px 8px 8px;
+}
+
+.other-message h2 {
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ color: var(--text-color);
+}
+
+.user {
+ width: 311px;
+ height: 80px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ justify-content: center;
+ padding: 0;
+ gap: 10px;
+}
+
+.user h2 {
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ text-align: right;
+ color: var(--text-color);
+}
+
+.user-message {
+ width: 149px;
+ display: flex;
+ align-items: flex-start;
+ padding: 14px;
+ gap: 10px;
+ background: var(--bg-user);
+ border-radius: 8px 0px 8px 8px;
+}
+
+.user-message h2 {
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ color: var(--text-color);
+}
+
+.message {
+ width: 311px;
+ height: 52px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 14px 24px;
+ gap: 10px;
+ background: var(--bg-app-color);
+ border-radius: 999px;
+}
+
+.message input {
+ width: 229px;
+ height: 30px;
+ font-family: var(--font-roboto);
+ font-style: normal;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 14px;
+ color: var(--text-color);
+ background: transparent;
+ border: none;
+}
+
+.message input::placeholder {
+ color: var(--text-color);
+ font-size: 12px;
+}
+
+.message button {
+ width: 24px;
+ height: 24px;
+ background: transparent;
+ border: none;
+ cursor: pointer;
+}
+
+.message button img {
+ width: 24px;
+ height: 24px;
+}
